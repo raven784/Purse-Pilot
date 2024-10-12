@@ -1,29 +1,35 @@
 import React from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <div>
-      <header className="bg-slate-300 shadow-md py-4 ">
-        <nav className="container mx-auto flex justify-between items-center">
-          <img src="../_images/pursepilot.png" />
-          <div>
-            <a href="#features" className="text-gray-800 mx-4 relative group">
-              Features
-              <span className="absolute left-0 bottom-[-5px] w-full h-1.5 bg-lime-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+      <header className="bg-white">
+        <nav className="mx-auto flex max-w-7x1 items-center justify-between lg:px-8">
+          <div className="flex lg:flex-1">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Purse Pilot</span>
+              <Image
+                src="/images/pursepilot.png"
+                alt="Purse Pilot Logo"
+                height={50}
+                width={100}
+                className="h-16 w-auto"
+              />
             </a>
-            <a href="#pricing" className="text-gray-800 mx-4 relative group">
-              Pricing
-              <span className="absolute left-0 bottom-[-5px] w-full h-1.5 bg-lime-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
-            </a>
+          </div>
+          <div className="pt-2">
             <a
-              href="/login"
-              className="bg-lime-500 text-white px-4 py-2 mx-4 rounded-lg shadow-lg transition-shadow duration-300 ease-in-out hover:shadow-2xl hover:shadow-lime-500"
+              href="#"
+              class="-mx-3 block rounded-lg px-3 py-5 text-base font-semibold leading-7 text-gray-900 hover:text-green-500"
             >
-              LOGIN
+              {" "}
+              Log In{" "}
             </a>
           </div>
         </nav>
       </header>
+      <hr className=" shadow-lg border-t border-green-400" />
     </div>
   );
 };
